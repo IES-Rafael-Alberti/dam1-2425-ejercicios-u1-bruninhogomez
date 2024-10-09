@@ -1,0 +1,34 @@
+import math 
+
+def comprobar_numero_float(valor:str):
+    if valor[:1] == "-":
+        valor = valor[1:]
+
+    pos_punto = valor.find(".")
+    if pos_punto >= 0:
+        if valor.find(".", pos_punto +1):
+            return False
+        
+
+
+    for i in range(len(valor)):# 0...len(valor) - 1
+        if valor[i] == ".":
+
+        if not valor[i].isdigit():
+            return False
+
+def calcular_area(lado_a, lado_b, lado_c):
+    semiperimetro = lado_a + lado_b +lado_c / 2
+    area = math.sqrt( semiperimetro * (semiperimetro-lado_a) * (semiperimetro - lado_b) * (semiperimetro - lado_c))
+    return area
+
+
+def main():
+    print("Dame los tres lados del triangulo...")
+    lado_a, lado_b, lado_c = input("Lado 1: ").strip(), input("Lado 2: ").strip(), input("Lado 3: ").strip()
+    calcular_area(lado_a, lado_b, lado_c)
+
+
+
+if __name__=="__main__":
+    main()
