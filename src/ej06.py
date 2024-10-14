@@ -7,7 +7,7 @@ x = float(input("introduzca el importe con IVA : "))
 #x es el valor del artículo
 y = 10
 #y es tipo de IVA 
-j = x / (1 + Y /100)
+j = x / (1 + y /100)
 #j es el valor del articulo sin IVA
 z = x -j
 #z es el IVA pagado
