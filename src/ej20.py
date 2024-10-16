@@ -7,12 +7,11 @@ def pedir_num():
     num = input("Introduce el numero de telefono: ")
     return num
 
-def separar_num(num):
-    num.split("-")
-
 def main():
     num = pedir_num()
-    num = separar_num(num)
+    
+
+    print(f"El numero de telefono sin prefijo y extensión es: {num.split("-")[1]} ")
 
 if __name__ == "__main__":
     main()
